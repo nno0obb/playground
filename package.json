@@ -9,50 +9,30 @@
     }
   },
   "czvinyl": {
-    "headerFormat": "{type}-#{ticket_id}: {subject}",
-    "bodyFormat": "{body}",
+    "headerFormat": "{type}({scope}): {ticket_id}{subject}",
     "commitTypes": [
       {
-        "description": "A new feature(feat), Improve performance(perf), Add/Update test(test)",
-        "emoji": "✨",
-        "value": "enhancement"
+        "description": "Problem Solving",
+        "emoji": "🤔",
+        "value": "ps"
       },
       {
-        "description": "About CI/CD",
-        "emoji": "🤖",
-        "value": "cicd"
-      },
-      {
-        "description": "Documentation only changes",
-        "emoji": "📚",
-        "value": "docs"
-      },
-      {
-        "description": "Hot fix",
-        "emoji": "🔥",
-        "value": "hotfix"
-      },
-      {
-        "description": "A bug fix",
-        "emoji": "🦋",
-        "value": "bugfix"
-      },
-      {
-        "description": "A code change that neither fixes a bug or adds a feature",
-        "emoji": "🛠",
-        "value": "refactor"
-      },
-      {
-        "description": "etc, chore",
+        "description": "ETC",
         "emoji": "🗑",
         "value": "etc"
       }
     ],
-    "typeQuestion": "Select the type of changes you're committing:\n",
+    "typeQuestion": "Choose type:\n",
+    "skipScope": false,
+    "scopes": [
+      "leetcode",
+      "boj"
+    ],
+    "bodyFormat": "{body}",
     "skipBody": true,
-    "skipScope": true,
-    "ticketIdQuestion": "Type the GitHub Issue Id (ex. 34):",
+    "subjectMinLength": 0,
+    "ticketIdQuestion": "Type number (Optional):",
     "skipTicketId": false,
-    "ticketIdRegex": "^[0-9]+$"
+    "ticketIdRegex": "^[0-9]*$"
   }
 }
